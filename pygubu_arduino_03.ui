@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="background">#e9e9e9</property>
+    <property name="borderwidth">5</property>
+    <property name="relief">raised</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">Arduino Controller</property>
+    <child>
+      <object class="tk.Frame" id="frm_pin_mode">
+        <property name="borderwidth">5</property>
+        <property name="height">200</property>
+        <property name="relief">sunken</property>
+        <property name="width">385</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="lbl_analog_input">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">Analog INPUT PIN Number</property>
+            <property name="width">25</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_digital_input">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">Digital INPUT PIN Number</property>
+            <property name="width">25</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_digital_optput">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">Digital OUTPUT PIN Number</property>
+            <property name="width">25</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_digital_pwm">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">Digital PWM PIN Number</property>
+            <property name="width">25</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="spnbox_pin_number_1">
+            <property name="borderwidth">5</property>
+            <property name="from_">0</property>
+            <property name="relief">groove</property>
+            <property name="to">50</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">3</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="spnbox_pin_number_2">
+            <property name="borderwidth">5</property>
+            <property name="from_">0</property>
+            <property name="relief">groove</property>
+            <property name="to">50</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">3</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="spnbox_pin_number_3">
+            <property name="borderwidth">5</property>
+            <property name="from_">0</property>
+            <property name="relief">groove</property>
+            <property name="to">50</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">3</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Spinbox" id="spnbox_pin_number_4">
+            <property name="borderwidth">5</property>
+            <property name="from_">0</property>
+            <property name="relief">groove</property>
+            <property name="to">50</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">3</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btn_set_1">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="height">0</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">SET</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btn_set_2">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="height">0</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">SET</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btn_set_3">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="height">0</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">SET</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btn_set_4">
+            <property name="anchor">center</property>
+            <property name="borderwidth">5</property>
+            <property name="height">0</property>
+            <property name="relief">groove</property>
+            <property name="text" translatable="yes">SET</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="frm_canvas">
+        <property name="borderwidth">5</property>
+        <property name="height">200</property>
+        <property name="relief">sunken</property>
+        <property name="width">385</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="lbl_device_1">
+            <property name="anchor">center</property>
+            <property name="borderwidth">3</property>
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Device 1</property>
+            <property name="width">14</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="frm_1">
+            <property name="borderwidth">5</property>
+            <property name="height">190</property>
+            <property name="relief">raised</property>
+            <property name="width">117</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object class="tk.Canvas" id="canvas_1">
+                <property name="borderwidth">3</property>
+                <property name="height">120</property>
+                <property name="relief">sunken</property>
+                <property name="width">99</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Progressbar" id="pgsbar_1">
+                <property name="length">95</property>
+                <property name="maximum">255</property>
+                <property name="orient">horizontal</property>
+                <property name="value">0</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lbl_device_2">
+            <property name="anchor">center</property>
+            <property name="borderwidth">3</property>
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Device 2</property>
+            <property name="width">14</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="frm_2">
+            <property name="borderwidth">5</property>
+            <property name="height">190</property>
+            <property name="relief">raised</property>
+            <property name="width">117</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object class="tk.Canvas" id="canvas_2">
+                <property name="borderwidth">3</property>
+                <property name="height">120</property>
+                <property name="relief">sunken</property>
+                <property name="width">99</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Progressbar" id="pgsbar_2">
+                <property name="length">95</property>
+                <property name="maximum">255</property>
+                <property name="orient">horizontal</property>
+                <property name="value">0</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lbl_device_3">
+            <property name="anchor">center</property>
+            <property name="borderwidth">3</property>
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Device 3</property>
+            <property name="width">14</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="frm_3">
+            <property name="borderwidth">5</property>
+            <property name="height">190</property>
+            <property name="relief">raised</property>
+            <property name="width">117</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object class="tk.Canvas" id="canvas_3">
+                <property name="borderwidth">3</property>
+                <property name="height">120</property>
+                <property name="relief">sunken</property>
+                <property name="width">99</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Progressbar" id="pgsbar_3">
+                <property name="length">95</property>
+                <property name="maximum">255</property>
+                <property name="orient">horizontal</property>
+                <property name="value">0</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lbl_device_4">
+            <property name="anchor">center</property>
+            <property name="borderwidth">3</property>
+            <property name="text" translatable="yes">Device 4</property>
+            <property name="width">8</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">3</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Scale" id="sldbar_4">
+            <property name="from_">0</property>
+            <property name="length">240</property>
+            <property name="orient">horizontal</property>
+            <property name="to">255</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="columnspan">10</property>
+              <property name="padx">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_sldbar_4_value">
+            <property name="text" translatable="yes">Value</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">20</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="frm_board_info">
+        <property name="borderwidth">5</property>
+        <property name="height">50</property>
+        <property name="relief">sunken</property>
+        <property name="width">385</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="lbl_board_info">
+            <property name="text" translatable="yes">Port</property>
+            <property name="width">4</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">1</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="txtbox_port">
+            <property name="text" translatable="yes">/dev/ttyACM0</property>
+            <property name="width">12</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">1</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btn_port_set">
+            <property name="borderwidth">3</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">set</property>
+            <property name="width">3</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">1</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="frm_fasele">
+            <property name="background">#ff0000</property>
+            <property name="borderwidth">3</property>
+            <property name="height">30</property>
+            <property name="relief">raised</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">4</property>
+              <property name="padx">12</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_connection">
+            <property name="text" translatable="yes">Status:</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lbl_connection_status">
+            <property name="text" translatable="yes">DisConnected</property>
+            <property name="width">13</property>
+            <layout>
+              <property name="column">6</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
