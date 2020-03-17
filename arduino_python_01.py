@@ -19,4 +19,3 @@ for i in range(500):
     motor.write(poten.read())
     time.sleep(0.01)
     print(i + 1, poten.read())
-a
